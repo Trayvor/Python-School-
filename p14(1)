@@ -1,0 +1,21 @@
+#3хв 15с - 195
+#4хв 45с - 285
+#2хв 30с - 150
+#3хв 5с - 186
+#2хв 35с - 155
+time = [195, 285, 150, 186, 155]
+waitingTime = []
+pos = 1
+a = 0
+
+print('Час обслуговування: ')
+for i in time:
+  a += i
+  print('покупець ', pos, ': ',  a)
+  waitingTime.append(a)
+  pos = pos + 1
+print('Номер покупця, якого обслуговували найшвидше: ', (time.index(min(time)) + 1))
+print('Час найтривалішого обслуговування у черзі: ', max(time), ' ceк.')
+print('Тривалість очікування: ')
+for i in waitingTime:
+  print(' покупець ', waitingTime.index(i) + 1 , ': ', i)
